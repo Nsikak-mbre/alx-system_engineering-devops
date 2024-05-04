@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Display string if certain conditions are met
+# startpoint = loop counter
+startpoint=1
+while [ $startpoint -lt 10 ]
+do
+	if [ $startpoint -eq 4 ]
+	then
+		printf "bad luck\n"
+	elif [ $startpoint -eq 8 ]
+	then
+		printf "good luck\n"
+	else
+		echo "Best School"
+	fi
+	startpoint=$(( startpoint +1 ))
+done
+
