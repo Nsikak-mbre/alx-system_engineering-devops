@@ -15,4 +15,3 @@ do
 	fi
 	startpoint=$(( startpoint +1 ))
 done
-

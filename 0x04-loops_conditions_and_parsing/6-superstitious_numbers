@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# print out input on condtion met, using case statement
+
+startpoint=1
+while [ $startpoint -le 20 ]
+do
+	echo $startpoint
+	case $startpoint in
+		4)
+			echo "bad luck from China"  ;;
+		9)
+			echo "bad luck from Japan"  ;;
+		17)
+			echo "bad luck from Italy"  ;;
+	esac
+	(( startpoint++ ))
+done
