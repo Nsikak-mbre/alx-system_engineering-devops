@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Display given string using if and while loop
+# startpoint = Loop counter
+startpoint=1
+
+while [ $startpoint -lt 10 ]
+do
+	echo "Best School"
+	startpoint=$(( startpoint +1 ))
+	if [ $startpoint -eq 9 ]
+	then
+		printf "Hi\n"
+	fi
+done
