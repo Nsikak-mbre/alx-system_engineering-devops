@@ -2,12 +2,12 @@
 # Display string if certain conditions are met
 # startpoint = loop counter
 startpoint=0
-while [ $startpoint -lt 11 ]
+while [ $startpoint -lt 10 ]
 do
 	if [ $startpoint -eq 4 ]
 	then
 		printf "bad luck\n"
-	elif [ $startpoint -eq 8 ]
+	elif [ $startpoint -eq 7 ]
 	then
 		printf "good luck\n"
 	else
