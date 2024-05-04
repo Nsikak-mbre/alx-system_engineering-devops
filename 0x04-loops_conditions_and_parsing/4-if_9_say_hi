@@ -10,5 +10,6 @@ do
 	if [ $startpoint -eq 9 ]
 	then
 		printf "Hi\n"
+		echo
 	fi
 done
