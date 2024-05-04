@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Display given string 10 times using untill loop
+# startpoint = Loop counter
+startpoint=1
+
+until [ $startpoint -gt 10 ]
+do
+	echo "Best School"
+	startpoint=$(( startpoint +1 ))
+done
