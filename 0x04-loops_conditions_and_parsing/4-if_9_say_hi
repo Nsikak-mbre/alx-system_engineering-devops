@@ -9,7 +9,7 @@ do
 	startpoint=$(( startpoint +1 ))
 	if [ $startpoint -eq 9 ]
 	then
-		printf "Hi\n"
-		echo
+		echo "Hi"
+		printf "\n"
 	fi
 done
