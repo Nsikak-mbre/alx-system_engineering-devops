@@ -4,7 +4,7 @@
 startpoint=0
 while [ $startpoint -lt 10 ]
 do
-	if [ $startpoint -eq 4 ]
+	if [ $startpoint -eq 3 ]
 	then
 		printf "bad luck\n"
 	elif [ $startpoint -eq 7 ]
