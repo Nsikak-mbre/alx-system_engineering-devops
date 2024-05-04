@@ -6,5 +6,5 @@ startpoint=1
 while [ $startpoint -le 10 ]
 do
 	echo "Best School"
-	startpoint=$(( $startpoint +1 ))
+	startpoint=$(( startpoint +1 ))
 done
