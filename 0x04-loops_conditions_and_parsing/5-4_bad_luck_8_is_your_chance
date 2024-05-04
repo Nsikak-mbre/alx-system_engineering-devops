@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Display string if certain conditions are met
 # startpoint = loop counter
-startpoint=1
-while [ $startpoint -lt 10 ]
+startpoint=0
+while [ $startpoint -lt 11 ]
 do
 	if [ $startpoint -eq 4 ]
 	then
