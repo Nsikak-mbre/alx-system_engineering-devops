@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Display given string 10 times using while loop
+# startpoint = Loop counter
+startpoint=1
+
+while [ $startpoint -le 10 ]
+do
+	echo "Best School"
+	startpoint=$(( $startpoint +1 ))
+done
