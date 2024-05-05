@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Displays a list of currently runnig processes
+
+running_process=$(ps auxf)
+echo "$running_process"
