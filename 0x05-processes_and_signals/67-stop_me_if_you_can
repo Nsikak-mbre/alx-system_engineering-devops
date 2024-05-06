@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Ends a process without using kill or kill all
+pkill -f "7-highlander"
