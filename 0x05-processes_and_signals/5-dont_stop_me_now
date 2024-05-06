@@ -2,4 +2,4 @@
 # Demonstrates using the kill signal to stop a process
 
 pid=$(pgrep -f 4-"to_infinity_and_beyond")
-kill -TERM "$pid"
+kill -9 "$pid"
