@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Displays line contianing bash, makes it easier to get Bash PID
 # shellcheck disable=SC2009
-ps -ef | grep bash
+ps -aux | grep bash
