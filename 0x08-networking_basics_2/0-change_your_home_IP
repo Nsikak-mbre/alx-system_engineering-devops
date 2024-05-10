@@ -2,5 +2,9 @@
 # configures an ubuntu server to resolve localhost to 127.0.0.2
 # and  facebook.com to 8.8.8.8.
 
-sed -i 's/^127.0.0.1 localhost/127.0.0.2 localhost/g' /etc/hosts
-echo "8.8.8.8 facebook.com" >> /etc/hosts
+cp /etc/hosts ~/hosts.back_up
+
+sed -i 's/^127.0.0.1 localhost/127.0.0.2 localhost/g' /hosts.back_up
+echo "8.8.8.8 facebook.com" >> /hosts.back_up
+
+cp -f ~/hosts.back_up /etc/hosts
