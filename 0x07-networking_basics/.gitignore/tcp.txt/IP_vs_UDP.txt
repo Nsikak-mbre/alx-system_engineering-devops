@@ -1,0 +1,16 @@
+TCP/IP is a suite of protocols used by devices to communicate over the
+Internet and most local networks.
+It is named after two of it's original protocols---the Transmission Control 
+Protocol (TCP) and the Internet Protocol (IP). TCP provides apps a way to 
+deliver (and receive) an ordered and error-checked stream of information 
+packets over the network.
+
+
+The User Datagram Protocol (UDP) is used by apps to deliver a faster 
+stream of information by doing away with error-checking. When configuring 
+some network hardware or software, you may need to know the difference.
+
+
+Both sends packet via the IP, and main difference lies in the error checked
+ability of TCP over UDP, UDP is mostly used for streaming and online games,
+as it doesnt bother with error checking

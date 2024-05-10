@@ -1,0 +1,35 @@
+A media access control(MAC) address is a string of character that 
+identifies a device on a network, it is tied to a key connection device
+in you ccomputer called the network interface card.(NIC)
+
+
+Now NIC is basically a circuit card that makes it possible for computers
+to connect to a network
+
+
+MAC addresses are linked to a network adapter when it is produced
+
+
+TCP\IP stands for transmission control protocol, it is used to interconnect
+network devices on the internet and computer networks,.
+It specifies how data should be formatter, addressed, transmitted,
+routed, and received at the destination
+
+How to find your MAC address on Windows 10 in your network settings
+===================================================================
+Type settings into the search bar on the taskbar at the bottom of the 
+screen.
+Select the Settings app to open your settings.
+Select Network & Internet.
+Select Properties.
+Scroll down to the bottom until you see Physical Address (MAC). 
+The values listed next to this are you
+
+
+Difference between IP and MAC addresses
+
+In summary, the key differences between an IP address and a MAC address 
+are their purposes, scopes, and levels within the network stack. 
+IP addresses are used for communication across networks and are logical 
+addresses, while MAC addresses are used for communication within the local 
+network and are physical addresses hardcoded into network interfaces.

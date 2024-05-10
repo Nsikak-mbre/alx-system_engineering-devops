@@ -1,0 +1,12 @@
+What is Internet Protocol (IP)?
+IP (short for Internet Protocol) specifies the technical format of packets
+ and the addressing scheme for computers to communicate over a network.
+Most networks combine IP with a higher-level protocol called Transmission
+Control Protocol (TCP), which establishes a virtual connection between a
+ destination and a source.
+
+IP by itself can be compared to something like the postal system.
+ It allows you to address a package and drop it in the system, 
+ but there’s no direct link between you and the recipient. TCP/IP, 
+ on the other hand, establishes a connection between two hosts so that 
+ they can send messages back and forth for a period of time

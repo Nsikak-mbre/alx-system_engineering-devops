@@ -1,0 +1,22 @@
+                    TYPES OF NETWORK 
+                    ================
+
+
+LAN: local area network
+WAN: wide area network
+WLAN: wireless local area network
+MAN: Metropolitan Area Network
+SAN: Storage area Network, system area network, server area network, or
+sometimes cluster area network
+CAN: campus area network, controller area network, or sometimes cluster
+area network
+PAN: personal area network
+
+LAN: local area network
+    connects network devices over a relatively short distance, owned and
+controlled by a single person or organisation
+
+WAN: wide area network
+    A WAN spans a large physical distance. The internet is the largest
+WAN, spannig the earth. Most WAN not owned by a single organisation,
+instead exists under collective or distributed ownership and management

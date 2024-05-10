@@ -1,0 +1,12 @@
+INTERNET
+========
+
+The internet is the global system of interconnected computer network, that
+uses the Internet protocol suite(TCP\IP) to communicate between
+network and devices.
+
+it is a network of networks that consist of private, public,academic,
+business, and government networks of local to global scope, linked by
+abroad array of electronic wireless, and optical networking technologies
+
+

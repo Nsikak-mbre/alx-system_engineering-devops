@@ -1,0 +1,17 @@
+What is a public IP address?
+A public IP address is the address that is assigned to a computing device 
+to allow direct access over the Internet. A web server, email server, and 
+any server device directly accessible from the Internet are candidates for
+ a public IP address. A public IP address is globally unique, and can only
+  be assigned to a unique device.
+
+
+  What is a private IP address?
+A private IP address is the address space allocated by InterNIC to allow
+ organizations to create their own private network. There are three IP
+  blocks (1 class A, 1 class B, and 1 class C) reserved for private use.
+   The computers, tablets, and smartphones sitting behind your home, and 
+   the personal computers within an organization are usually assigned 
+   private IP addresses. A network printer residing in your home is 
+   assigned a private address so that only your family can print to your
+    local printer.

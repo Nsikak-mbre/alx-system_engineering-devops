@@ -1,0 +1,79 @@
+IP Address
+==========
+
+Consist of 4 number seperated by periods, ranges from 0-255
+
+An example of how an IP address appears is: 192.168.1.10,
+there are a total 4,294,967,296 possible IP addresses.
+
+3 special ranges
+
+a)  The first is the 0.0.0.0 address and refers to the default network
+
+b) the 255.255.255.255 address which is called the broadcast address. 
+
+        These addresses are used for routing, the two mentioned above are
+said to be reserved, and are not considered usable
+
+IP CONFLICT, happens when two devcices are assigned the same IP, rare
+but implies, both computers can't communicate with each other
+
+                    DEFAULT 
+                    =======
+Default Network: The special network 0.0.0.0 is generally used 
+for routing.
+
+
+                CLASS A 
+                ========
+Class A: From the table above you see that there are 126 class A networks.
+ These networks consist of 16,777,214 possible IP addresses that can be 
+ assigned to devices and computers. This type of allocation is generally 
+ given to very large networks such as multi-national companies.
+
+
+                CLASS B 
+                =======
+Class B: This class consists of 16,384 individual networks, 
+each allocation consisting of 65,534 possible IP addresses. 
+These blocks are generally allocated to Internet Service Providers and 
+large networks, like a college or major hospital.
+
+
+                    CLASS C 
+                    =======
+
+Class C: There is a total of 2,097,152 Class C networks available, 
+with each network consisting of 255 individual IP addresses. 
+This type of class is generally given to small to mid-sized companies. 
+
+
+Class D: The IP addresses in this class are reserved for a service 
+called Multicast.
+
+
+Class E: The IP addresses in this class are reserved for experimental use.
+
+Broadcast: This is the special network of 255.255.255.255, 
+and is used for broadcasting messages to the entire network that your 
+computer resides on.
+
+
+                        PRIVATE ADDRESS 
+                        ================
+
+There are also blocks of IP addresses that are set aside for internal
+ private use for computers not directly connected to the Internet.
+
+These IP addresses are used for internal use by company or home networks
+that need to use TCP/IP but do not want to be directly visible on the
+Internet.                    
+
+
+Class           Private Start Address         Private End Address
+A               10.0.0.0                        10.255.255.255
+B               172.16.0.0                      172.31.255.255
+C               192.168.0.0                     192.168.255.255
+
+
+
