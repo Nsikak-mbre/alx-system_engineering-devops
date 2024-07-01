@@ -2,7 +2,7 @@
 # Diable password acccess to server
 
 Host myserver
-    HostName 100.26.136.201
+    HostName 34.239.249.9
     User ubuntu
     IdentityFile ~/.ssh/school
     PasswordAuthentication no
