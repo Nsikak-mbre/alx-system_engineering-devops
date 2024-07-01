@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# Uses dd to connect to server
+# Connecting to a server using ssh
 
 ssh -i ~/.ssh/school ubuntu@100.26.136.201
