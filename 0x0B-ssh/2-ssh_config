@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 # Diable password acccess to server
 
-Host nk-server
-    HostName 54.157.174.70
+Host 54.157.174.70
     User ubuntu
     IdentityFile ~/.ssh/school
     PasswordAuthentication no
