@@ -13,9 +13,24 @@ sudo ufw allow 'Nginx HTTP'
 # Define the content for the custom 404 page
 CUSTOM_404_CONTENT="Ceci n'est pas une page"
 
-# Check if custom 404 page needs configuration
-if ! grep -q "error_page 404 /404.html;" /etc/nginx/sites-available/default || ! grep -q "$CUSTOM_404_CONTENT" /var/www/html/404.html
-then
+# Remove existing custom_40.html file if it exists
+if [ -f /var/www/html/custom_40.html ]; then
+    sudo rm /var/www/html/custom_40.html
+fi
+
+# Ensure 404.html exists and contains the specified content
+if [ ! -f /var/www/html/404.html ]; then
+    # Create 404.html with the specified content
+    echo "$CUSTOM_404_CONTENT" | sudo tee /var/www/html/404.html > /dev/null
+else
+    # Update 404.html if it doesn't contain the specified content
+    if ! grep -q "$CUSTOM_404_CONTENT" /var/www/html/404.html; then
+        echo "$CUSTOM_404_CONTENT" | sudo tee /var/www/html/404.html > /dev/null
+    fi
+fi
+
+# Configure Nginx to use 404.html for 404 errors
+if ! grep -q "error_page 404 /404.html;" /etc/nginx/sites-available/default; then
     # Add custom 404 page configuration using sed
     sudo sed -i '/listen 80 default_server/a \
     \    error_page 404 /404.html;\n\
@@ -24,12 +39,9 @@ then
     \        root /var/www/html;\n\
     \    }\n' /etc/nginx/sites-available/default
 
-    # Create or update the custom 404 page with the specified content
-    echo "$CUSTOM_404_CONTENT" | sudo tee /var/www/html/404.html > /dev/null
-
     # Test Nginx configuration
     sudo nginx -t
 
     # Restart Nginx to apply changes
-    sudo systemctl restart nginx
+    sudo service nginx restart
 fi
