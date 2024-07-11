@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# Configure a custom header response via nginx
+
+# Update package list
+sudo apt-get update
+
+# Install Nginx
+sudo apt-get -y install nginx
+
+# Allow Nginx through the firewall (if ufw is installed)
+sudo ufw allow 'Nginx HTTP'
+
+# Define the content for the custom HTTP response header configuration
+CUSTOM_HEADER_CONTENT="add_header X-Served-By \$hostname;"
+
+# Check if custom header needs configuration in Nginx
+if ! grep -q "$CUSTOM_HEADER_CONTENT" /etc/nginx/sites-available/default
+then
+    # Add custom header configuration using sed
+    sudo sed -i "/listen 80 default_server/a $CUSTOM_HEADER_CONTENT" /etc/nginx/sites-available/default
+
+    # Test Nginx configuration
+    sudo nginx -t
+
+    # Restart Nginx to apply changes
+    sudo service nginx start
+fi
