@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# Configure custom 404 page
+
+# Update package list and install nginx
+sudo apt-get -y update
+sudo apt-get -y install nginx
+
+# Allow 'Nginx HTTP' through the firewall
+sudo ufw allow 'Nginx HTTP'
+
+# Create or overwrite the 404.html page with the required content
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
+
+# Prepare the configuration lines to be added
+newlines="    error_page 404 /404.html;\n    location = /404.html {\n        root /usr/share/nginx/html;\n        internal;\n    }"
+
+# Insert the configuration lines into the default site configuration
+sudo sed -i "/index index.html index.htm index.nginx-debian.html;/a\\$newlines" /etc/nginx/sites-available/default
+
+# Test the Nginx configuration
+sudo nginx -t
+
+# Restart Nginx to apply the changes
+sudo service nginx restart
