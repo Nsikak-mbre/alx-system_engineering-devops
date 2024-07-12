@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# install and configure HAproxy sending traffic to web-01 and web-02
+
+#u update package list
+sudo apt-get update
+
+# Install HAProxy
+sudo apt-get -y install haproxy
+
+# Backup the original HAProxy configuration file
+sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.bak
+
+
+# Use sed to append configuration to haproxy.cfg
+sudo sed -i '/backend servers/a \
+    balance roundrobin\n\
+    server 487868-web-01 54.157.174.70:80 check\n\
+    server 487868-web-02 100.25.199.84:80 check\n\
+' /etc/haproxy/haproxy.cfg
+
+# Restart HAProxy to apply changes
+sudo systemctl restart haproxy
+
+# Enable HAProxy to start on boot (for compatibility with init scripts)
+sudo systemctl enable haproxy
