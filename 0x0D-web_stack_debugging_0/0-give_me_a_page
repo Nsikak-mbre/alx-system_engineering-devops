@@ -8,24 +8,15 @@ sudo apt-get -y install docker.io
 # Run Apache container
 docker run -p 8080:80 -d -it holbertonschool/265-0
 
-# Check Docker container status
-docker ps
+# Wait for Apache to start (optional)
+sleep 2
 
-# Access container shell safely (fixed SC2086)
-CONTAINER_ID=$(docker ps -q)
-docker exec -it "$CONTAINER_ID" /bin/bash
+# Verify Apache page content
+response=$(curl -s http://localhost:8080)
 
-# Fix Apache configuration (inside container)
-# Check if Apache service is running
-if service apache2 status | grep -q "apache2 is running"; then
-    echo "Apache is running"
+# Check if response contains "Hello Holberton"
+if [[ $response == *"Hello Holberton"* ]]; then
+    echo "Apache is serving Hello Holberton"
 else
-    echo "Apache is not running"
-    service apache2 start
+    echo "Apache is not serving Hello Holberton"
 fi
-
-# Exit container shell
-exit
-
-# Verify page content
-curl 0:8080
