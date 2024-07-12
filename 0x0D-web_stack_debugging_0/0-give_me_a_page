@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# Script to debug and fix Apache serving issue in Docker container
+
+# Update and install Docker (if not already installed)
+sudo apt-get update
+sudo apt-get -y install docker.io
+
+# Run Apache container
+docker run -p 8080:80 -d -it holbertonschool/265-0
+
+# Check Docker container status
+docker ps
+
+# Access container shell
+CONTAINER_ID=$(docker ps -q)
+docker exec -it $CONTAINER_ID /bin/bash
+
+# Fix Apache configuration (inside container)
+# Typically involves checking Apache service status and restarting if necessary
+service apache2 status
+service apache2 restart
+
+# Exit container shell
+exit
+
+# Verify page content
+curl 0:8080
