@@ -1,22 +1,4 @@
 #!/usr/bin/env bash
-# Script to debug and fix Apache serving issue in Docker container
-
-# Update and install Docker (if not already installed)
-sudo apt-get update
-sudo apt-get -y install docker.io
-
-# Run Apache container
-docker run -p 8080:80 -d -it holbertonschool/265-0
-
-# Wait for Apache to start (optional)
-sleep 2
-
-# Verify Apache page content
-response=$(curl -s http://localhost:8080)
-
-# Check if response contains "Hello Holberton"
-if [[ $response == *"Hello Holberton"* ]]; then
-    echo "Apache is serving Hello Holberton"
-else
-    echo "Apache is not serving Hello Holberton"
-fi
+# Run Apache on the holbertonschool/265-0 Docker container.
+echo "ServerName localhost" >> /etc/apache2.conf
+service apache2 start
