@@ -1,5 +1,4 @@
 #!/usr/bin bash
-
 # Check if the password argument is provided
 if [ -z "$1" ]; then
     echo "Usage: $0 <mysql-root-password>"
