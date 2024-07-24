@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# run the whoami command as root
+
+username=$1
+
+sudo -u "$username" whoami
