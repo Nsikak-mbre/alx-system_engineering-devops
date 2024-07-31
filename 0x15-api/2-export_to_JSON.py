@@ -25,3 +25,20 @@ if __name__ == "__main__":
     )
     todo_response = requests.get(todo_url)
     todo_data = todo_response.json()
+
+    # creating json data structure
+    tasks = []
+    for task in todo_data:
+        tasks.append({
+            "task": task.get('title'),
+            "completed": task.get('completed'),
+            "username": username
+        })
+    data = {str(employee_id): tasks}
+
+    # define JSON file name
+    json_file = "{}.json".format(employee_id)
+
+    # write to JSON file
+    with open(json_file, mode='w') as file:
+        json.dump(data, file)
