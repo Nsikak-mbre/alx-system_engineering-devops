@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Querries the redit API.
+Querries the redit API
 """
 import requests
 
