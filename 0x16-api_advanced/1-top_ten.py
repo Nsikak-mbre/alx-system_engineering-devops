@@ -16,7 +16,7 @@ def top_ten(subreddit):
         None
     """
     url = "https://www.reddit.com/r/{}/hot.json?limit=10".format(subreddit)
-    headers = {'User-Agent': '1-top_ten/top_ten_posts'}
+    headers = {'User-Agent': '1-top_ten/posts'}
 
     try:
         response = requests.get(url, headers=headers, allow_redirects=False)
