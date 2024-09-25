@@ -24,15 +24,19 @@ def top_ten(subreddit):
 
         # Check if the response was successful (status code 200)
         if response.status_code == 200:
-            data = response.json()
-            posts = data.get('data', {}).get('children', [])
-            
-            # Check if there are any posts
-            if posts:
-                # Print the titles of the posts
-                for post in posts:
-                    print(post['data']['title'])
-            else:
+            try:
+                data = response.json()
+                posts = data.get('data', {}).get('children', [])
+                
+                # Check if there are any posts
+                if posts:
+                    # Print the titles of the posts
+                    for post in posts:
+                        print(post['data']['title'])
+                else:
+                    print(None)
+            except ValueError:
+                # Handle the case where response isn't JSON
                 print(None)
         else:
             # If subreddit is invalid or doesn't exist
